@@ -4,14 +4,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- CSS only -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-
-    <!-- Additional CSS must be placed after Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-    <link rel="stylesheet" href="css/styles.css" />
+   <!-- build:css css/main.css -->
+   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+   <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+   <link rel="stylesheet" href="css/styles.css" />
+   <!-- endbuild -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
 
     <title>NuCamp: A Better Way To Camp</title>
 </head>
@@ -42,9 +41,9 @@
     <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog" role="document" class="modal-lg">
             <div class="modal-content">
-                <div class="modal-header bg-info text-white" >
+                <div class="modal-header " >
                     <h3 class="modal-title">Reserve a Campsite</h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button"  id="reserveButton"class="close" >&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
@@ -104,7 +103,7 @@
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="img/img/logo.png" height="30" width="30" alt=""></a>
-            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#nucampNavbar">
+            <button class="navbar-toggler " type="button" id="loginButton">
                 <span class="navbar-toggler-icon"></span>
 
             </button>
@@ -135,7 +134,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title">Login</h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" id="loginButton" >&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
@@ -168,7 +167,7 @@
     </div>
 
     <div class="container">
-
+<!--add carousel-->
         <div class="row row-content">
             <div class="col-md-8 mx-auto">
                 <div id="homeCarousel" class="carousel slide" data-ride="carousel">
@@ -216,6 +215,14 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                    <!--add button play and pause-->
+                  
+                        <button class="btn btn-sm btn-danger" id="carouselButton">
+                            <i class="fa fa-pause"></i>
+                        </button>
+                       
+
+                   
                      
 
 
@@ -307,9 +314,13 @@
             </div>
         </div>
     </footer>
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- JQuery must come first then Popper.js, then bootstrap Javascript plugin-->
+  <!-- build:js js/main.js -->
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <!-- endbuild -->
 
  
 
